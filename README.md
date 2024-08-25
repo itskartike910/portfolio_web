@@ -4,7 +4,7 @@ Welcome to my personal portfolio app! This project showcases my skills, projects
 
 ## Live Demo
 
-Check out the live version of the web app inn github pages.[here]([https://portfolio-kk09.netlify.app/](https://itskartike910.github.io/portfolio_web/)).
+Check out the live version of the web app in github pages.[here]([https://itskartike910.github.io/portfolio_web/]).
 
 ## Features
 
@@ -65,16 +65,7 @@ To enable the contact form functionality, you need to set up the SMTP server con
    - Generate an App Password for the email account.
 
 ## Deployment
-
-### Netlify
-
-1. **Create a Netlify Account**: [Netlify Signup](https://www.netlify.com/)
-2. **New Site from Git**:
-   - Connect your GitHub repository.
-   - Select the `main` branch.
-3. **Build Settings**:
-   - Build Command: `flutter build web`
-   - Publish Directory: `build/web`
+### Github Pages
 
 ### Flutter Web Build
 
@@ -113,9 +104,5 @@ Feel free to submit issues and enhancement requests.
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## Acknowledgements
+![image](https://github.com/user-attachments/assets/22521f5c-9b1c-4a2f-9817-ffe67c5e01cf)
 
-- [Flutter](https://flutter.dev/)
-- [Netlify](https://www.netlify.com/)
-- [Google Fonts](https://fonts.google.com/)
-- [Mailer](https://pub.dev/packages/mailer)
