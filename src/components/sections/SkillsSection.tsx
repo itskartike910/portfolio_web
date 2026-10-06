@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { skillCategories, type SkillItem } from '../../data/portfolioData';
+import { assetUrl } from '../../utils/assets';
 import '../../styles/SkillsSection.css';
 
 const skillIcons: Record<string, string> = {
@@ -86,7 +87,7 @@ const SkillChip: React.FC<SkillChipProps> = ({ skill }) => {
     >
       {iconPath ? (
         <img
-          src={iconPath}
+          src={assetUrl(iconPath)}
           alt={skill.name}
           className="skill-chip-img"
           onError={(e) => {

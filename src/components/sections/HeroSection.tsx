@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import TypewriterText from '../common/TypewriterText';
 import { capabilities } from '../../data/portfolioData';
+import { assetUrl } from '../../utils/assets';
 import '../../styles/HeroSection.css';
 
 const socialLinks = [
@@ -13,31 +14,31 @@ const socialLinks = [
   {
     name: 'LinkedIn',
     url: 'https://www.linkedin.com/in/kartikskr/',
-    iconImg: '/assets/icons/linkedin.png',
+    iconImg: assetUrl('/assets/icons/linkedin.png'),
     accent: '#0A66C2',
   },
   {
     name: 'GitHub',
     url: 'https://github.com/itskartike910',
-    iconImg: '/assets/icons/github.jpg',
+    iconImg: assetUrl('/assets/icons/github.jpg'),
     accent: '#7B2FFE',
   },
   {
     name: 'LeetCode',
     url: 'https://leetcode.com/u/its_kartike/',
-    iconImg: '/assets/icons/leetcode.png',
+    iconImg: assetUrl('/assets/icons/leetcode.png'),
     accent: '#FFA116',
   },
   {
     name: 'GFG',
     url: 'https://www.geeksforgeeks.org/user/kumarkartik147359/',
-    iconImg: '/assets/icons/gfg.jpg',
+    iconImg: assetUrl('/assets/icons/gfg.jpg'),
     accent: '#27C93F',
   },
   {
     name: 'CodeChef',
     url: 'https://www.codechef.com/users/its_kartike',
-    iconImg: '/assets/icons/codechef.jpg',
+    iconImg: assetUrl('/assets/icons/codechef.jpg'),
     accent: '#FFBE0B',
   },
 ];
@@ -279,10 +280,10 @@ const ProfileImage: React.FC<ProfileImageProps> = ({ isHovering, rotation, onMou
       }}
     >
       <img
-        src="/profile.jpg"
+        src={assetUrl('/profile.jpg')}
         alt="Kartik Kumar"
         onError={(e) => {
-          e.currentTarget.src = '/assets/profile.jpg';
+          e.currentTarget.src = assetUrl('/assets/profile.jpg');
         }}
       />
     </div>

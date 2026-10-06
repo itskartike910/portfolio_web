@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { assetUrl } from '../../utils/assets';
 import '../../styles/Navbar.css';
 
 const navItems = [
@@ -66,11 +67,11 @@ const Navbar: React.FC<NavbarProps> = ({ scrollProgress = 0 }) => {
           <div className="navbar-logo" onClick={() => scrollTo('hero')} title="Kartik Kumar">
             <div className="logo-ring">
               <img
-                src="/assets/icons/app_icon.png"
+                src={assetUrl('/assets/icons/app_icon.png')}
                 alt="Kartik"
                 className="logo-img"
                 onError={(e) => {
-                  e.currentTarget.src = '/profile.jpg';
+                  e.currentTarget.src = assetUrl('/profile.jpg');
                 }}
               />
             </div>

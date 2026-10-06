@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { assetUrl } from '../../utils/assets';
 import '../../styles/ContactSection.css';
 
 const socialPills = [
@@ -142,7 +143,7 @@ const ContactSection: React.FC = () => {
               } as React.CSSProperties}
             >
               <img
-                src={pill.icon}
+                src={assetUrl(pill.icon)}
                 alt={pill.name}
                 className="social-pill-icon"
                 onError={(e) => {

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { assetUrl } from '../../utils/assets';
 import '../../styles/StatsSection.css';
 
 interface LeetCodeStats {
@@ -344,7 +345,7 @@ const StatsSection: React.FC = () => {
           <div className="stats-card leetcode-perf-card">
             <div className="card-header">
               <div className="lc-logo-tag">
-                <img src="/assets/icons/leetcode.png" alt="LeetCode" className="lc-icon-img" onError={(e) => { e.currentTarget.style.display = 'none'; }} />
+                <img src={assetUrl('/assets/icons/leetcode.png')} alt="LeetCode" className="lc-icon-img" onError={(e) => { e.currentTarget.style.display = 'none'; }} />
                 <span className="card-header-title mono">its_kartike</span>
               </div>
               <div className="lc-rank-badge">
