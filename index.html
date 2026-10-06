@@ -1,59 +1,27 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <!--
-    If you are serving your web app in a path other than the root, change the
-    href value below to reflect the base path you are serving from.
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/assets/icons/app_icon.png" />
+    <link rel="apple-touch-icon" href="/assets/icons/app_icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kartik Kumar — Software Engineer & AI Systems Builder</title>
+    <meta name="description" content="Kartik Kumar — Software Engineer specializing in AI agents, Chromium internals, Rust systems, and full-stack development. NIT Patna CSE graduate. LeetCode Max 1829." />
+    <meta name="keywords" content="Kartik Kumar, Software Engineer, AI Agent, Chromium, Rust, React, TypeScript, NIT Patna, Portfolio" />
+    <meta name="author" content="Kartik Kumar" />
 
-    The path provided below has to start and end with a slash "/" in order for
-    it to work correctly.
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Kartik Kumar — Software Engineer & AI Systems Builder" />
+    <meta property="og:description" content="Building high-performance systems and autonomous AI agents. NIT Patna CSE. LeetCode 1829." />
+    <meta property="og:image" content="/profile.jpg" />
 
-    For more details:
-    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
-
-    This is a placeholder for base href that will be replaced by the value of
-    the `--base-href` argument provided to `flutter build`.
-  -->
-  <base href="./">
-
-  <meta charset="UTF-8">
-  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="A new Flutter project.">
-
-  <!-- iOS meta tags & icons -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="portfolio">
-  <link rel="apple-touch-icon" href="./icons/Icon-192.png">
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="./favicon.png"/>
-
-  <title>portfolio</title>
-  <link rel="manifest" href="./manifest.json">
-
-  <script>
-    // The value below is injected by flutter build, do not touch.
-    const serviceWorkerVersion = "684867359";
-  </script>
-  <!-- This script adds the flutter initialization JS code -->
-  <script src="./flutter.js" defer></script>
-</head>
-<body>
-  <script>
-    window.addEventListener('load', function(ev) {
-      // Download main.dart.js
-      _flutter.loader.loadEntrypoint({
-        serviceWorker: {
-          serviceWorkerVersion: serviceWorkerVersion,
-        },
-        onEntrypointLoaded: function(engineInitializer) {
-          engineInitializer.initializeEngine().then(function(appRunner) {
-            appRunner.runApp();
-          });
-        }
-      });
-    });
-  </script>
-</body>
+    <!-- Preconnect to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>

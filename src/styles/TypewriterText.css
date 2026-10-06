@@ -1,0 +1,13 @@
+.typewriter-wrap {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: clamp(16px, 3vw, 26px);
+  display: inline;
+}
+
+.typewriter-cursor {
+  display: inline;
+  font-weight: 300;
+  margin-left: 2px;
+  transition: opacity 0.1s;
+}

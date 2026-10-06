@@ -1,0 +1,213 @@
+/* ── Global app layout ─────────────────────────────────────────────────────── */
+
+.app-root {
+  min-height: 100vh;
+  background: var(--bg);
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* ── WebGL Interactive Cursor Ring Field Background ──────────────────────── */
+
+.cursor-field-bg-wrap {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+  opacity: 0.7;
+}
+
+/* ── Global ambient background blobs ─────────────────────────────────────── */
+
+.bg-blob {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(100px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.bg-blob-1 {
+  width: 550px;
+  height: 550px;
+  background: var(--blob-purple);
+  opacity: 0.05;
+  top: -150px;
+  right: -150px;
+  animation: blob-move 15s ease-in-out infinite;
+}
+
+.bg-blob-2 {
+  width: 500px;
+  height: 500px;
+  background: var(--blob-cyan);
+  opacity: 0.04;
+  bottom: 80px;
+  left: -120px;
+  animation: blob-move 18s ease-in-out infinite reverse;
+}
+
+.bg-blob-3 {
+  width: 380px;
+  height: 380px;
+  background: var(--blob-pink);
+  opacity: 0.035;
+  top: 45%;
+  left: 45%;
+  animation: blob-move 20s ease-in-out infinite 5s;
+}
+
+/* ── Page layout ──────────────────────────────────────────────────────────── */
+
+.page-content {
+  padding-top: 76px; /* navbar initial height */
+  position: relative;
+  z-index: 1;
+}
+
+.content-wrapper {
+  max-width: 1560px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 16px clamp(14px, 3.2vw, 48px);
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.section-wrapper {
+  margin-bottom: 24px;
+  scroll-margin-top: 88px;
+}
+
+/* Section ID anchors */
+#hero,
+#skills,
+#experience,
+#stats,
+#achievements,
+#projects,
+#contact {
+  scroll-margin-top: 88px;
+}
+
+/* ── Experience & Skills Side-by-Side on Desktop ──────────────────────────── */
+
+.exp-skills-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  align-items: stretch;
+}
+
+.exp-skills-col {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.exp-skills-col .neon-card {
+  height: 100%;
+}
+
+@media (max-width: 960px) {
+  .exp-skills-row {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-content {
+    padding-top: 70px;
+  }
+
+  .content-wrapper {
+    padding: 12px 10px;
+    gap: 20px;
+  }
+
+  .section-wrapper {
+    margin-bottom: 16px;
+    scroll-margin-top: 76px;
+  }
+
+  #hero,
+  #skills,
+  #experience,
+  #stats,
+  #achievements,
+  #projects,
+  #contact {
+    scroll-margin-top: 76px;
+  }
+}
+
+/* ── Floating Back to Top Button ─────────────────────────────────────────── */
+
+.back-to-top-btn {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(14, 14, 28, 0.75);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(0, 217, 255, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5), 0 0 16px rgba(0, 217, 255, 0.25);
+  transition: all 0.25s ease;
+  padding: 0;
+}
+
+.back-to-top-btn:hover {
+  transform: translateY(-4px) scale(1.05);
+  background: rgba(14, 14, 28, 0.9);
+  border-color: rgba(0, 217, 255, 0.7);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.6), 0 0 24px rgba(0, 217, 255, 0.45);
+}
+
+.progress-ring-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotate(-90deg);
+}
+
+.progress-ring-bg {
+  fill: transparent;
+  stroke: rgba(255, 255, 255, 0.08);
+}
+
+.progress-ring-circle {
+  fill: transparent;
+  stroke: var(--accent-cyan);
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.15s ease;
+}
+
+.back-to-top-arrow {
+  position: relative;
+  z-index: 1;
+  font-size: 18px;
+  font-weight: 900;
+  color: #FFFFFF;
+}
+
+@media (max-width: 768px) {
+  .back-to-top-btn {
+    bottom: 20px;
+    right: 18px;
+    width: 44px;
+    height: 44px;
+  }
+}
